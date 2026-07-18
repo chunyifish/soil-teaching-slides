@@ -1,0 +1,4 @@
+interface:
+  display_name: "SOIL Teaching Slides"
+  short_description: "Build SOIL slide plans and A, B, C, or D presentation decks."
+  default_prompt: "Use $soil-teaching-slides to turn my teaching material into a SOIL slide plan and, after I confirm it, an image-first, editable PPTX, NotebookLM, or offline HTML deck."
