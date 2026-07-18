@@ -11,7 +11,7 @@
 
 Recommended citation:
 
-> 李俊儀（2026）。SOIL Teaching Slides Skill（v1.0.0）。
+> 李俊儀（2026）。SOIL Teaching Slides Skill（v1.0.1）。
 > https://github.com/chunyifish/soil-teaching-slides
 
 For adapted instructional content, also state that changes were made and link
