@@ -83,7 +83,7 @@ $soil-teaching-slides 請做成離線 HTML 簡報。表格資訊量大，請優�
 ## 建議引用
 
 ```text
-李俊儀（2026）。SOIL Teaching Slides Skill（v1.0.0）。
+李俊儀（2026）。SOIL Teaching Slides Skill（v1.0.1）。
 https://github.com/chunyifish/soil-teaching-slides
 ```
 
