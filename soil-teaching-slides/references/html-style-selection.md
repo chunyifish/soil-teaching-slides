@@ -80,4 +80,3 @@ Include:
 - Motion level: none, subtle, or instructional
 - Image policy: none, optional, or required
 - Repeated page furniture, if any
-
