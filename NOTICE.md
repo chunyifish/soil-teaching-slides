@@ -3,7 +3,7 @@
 ## Project
 
 - Project: SOIL Teaching Slides Skill
-- Copyright holder: chunyifish
+- Copyright holder: 李俊儀
 - Canonical repository: https://github.com/chunyifish/soil-teaching-slides
 - First public release: v1.0.0
 
@@ -11,7 +11,7 @@
 
 Recommended citation:
 
-> chunyifish（2026）。SOIL Teaching Slides Skill（v1.0.0）。
+> 李俊儀（2026）。SOIL Teaching Slides Skill（v1.0.0）。
 > https://github.com/chunyifish/soil-teaching-slides
 
 For adapted instructional content, also state that changes were made and link
