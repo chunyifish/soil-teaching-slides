@@ -1,6 +1,6 @@
 # SOIL Educational Content License
 
-Copyright (c) 2026 chunyifish
+Copyright (c) 2026 李俊儀
 
 Except for the software and executable template files explicitly covered by
 the repository's MIT License, the SOIL instructional content in this
@@ -28,7 +28,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 When sharing the covered material or an adaptation, provide an attribution
 substantially similar to:
 
-> SOIL Teaching Slides Skill by chunyifish, licensed under CC BY-NC-SA 4.0.
+> SOIL Teaching Slides Skill by 李俊儀, licensed under CC BY-NC-SA 4.0.
 > Source: https://github.com/chunyifish/soil-teaching-slides
 
 Indicate whether changes were made. Adaptations must not imply endorsement,
