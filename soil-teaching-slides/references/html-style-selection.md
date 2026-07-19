@@ -1,10 +1,40 @@
 # Mode D Content-Driven Style Selection
 
-Use an explicit user style as the source of truth. When no style is specified, select exactly one deck-level style family from the content. Do not mix or average families.
+Use an explicit user style as the source of truth. When no style is specified, recommend a small set of relevant choices and ask the user to select one during the Phase 1 confirmation. Do not mix or average families.
+
+## Style Confirmation Procedure
+
+1. Skip the question when the user already supplied a clear visual direction, template, brand system, or reference deck.
+2. Otherwise offer 2-4 concise choices. Put one content-based recommendation first and explain each option in one short sentence.
+3. Always include `Structured Teaching — Current default` as an option, even when another family is the recommendation.
+4. State: `如果沒有偏好，我會沿用目前核定的 Structured Teaching 風格。`
+5. Treat `沒有意見`, `你決定`, `照預設`, or a plan confirmation that does not address style as approval to use the current default. Do not block production with another style question.
+6. Record the final family, palette, typography, motion, and image policy in the deck-level style brief.
+
+Example choice format:
+
+- `Structured Teaching — Current default`: warm white, black hierarchy, cool gray frames, muted orange emphasis; best for concepts and procedures.
+- `Workshop Facilitation`: stronger task prompts and response areas; best for hands-on practice and discussion.
+- `Research / Evidence`: neutral evidence-first tables and claims; best for reports or source comparison.
+- `Hand-Drawn Teaching`: editable labels with restrained hand-drawn diagrams; best when concrete metaphors improve understanding.
+
+Offer only the choices relevant to the material; replace the less relevant examples with `Narrative / Conviction` when the content is reflective or story-led.
+
+## Approved Default: Structured Teaching
+
+Use this style when the user has no preference:
+
+- Warm white background `#F7F4EE`
+- Ink black `#16191D`, muted gray `#62676D`, structural gray `#CDD1D4`
+- One muted orange accent `#E65327`
+- Microsoft JhengHei-first system sans-serif typography
+- Stable top-left page number and section label, left-aligned titles, framed tasks and takeaways
+- Editable HTML/CSS/SVG teaching diagrams, no raster images by default
+- Subtle transitions; instructional progressive reveal only when sequencing matters
 
 ## Selection Order
 
-Judge in this order:
+Use this order to rank the recommendation:
 
 1. Communication purpose
 2. Learner task

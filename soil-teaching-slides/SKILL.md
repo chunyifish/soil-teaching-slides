@@ -18,7 +18,7 @@ Default visual architecture:
 
 - Modes A and C share the user's old `黑白手繪教學圖解風` v2.1 template and YAML. Read `references/soil-handdrawn-style-v2.yaml` as the canonical style source and `references/handdrawn-soil-style.md` as its compact operational guide.
 - Mode B is an independent editable large-text system. Never import Mode B typography, page chrome, title treatment, or no-footer rule into Modes A or C.
-- Mode D is an independent offline HTML system. Reuse the approved SOIL teaching structure, but do not inherit the fixed visual system of A, B, or C unless the user explicitly requests it.
+- Mode D is an independent offline HTML system. Reuse the approved SOIL teaching structure, but do not inherit the fixed visual system of A, B, or C unless the user explicitly requests it. Before building, ask the user to choose a visual style unless they already supplied one. If they have no preference or do not answer the style part of the confirmation, use the approved default Structured Teaching style defined in `references/html-style-selection.md`.
 - Override a mode's default only when the user explicitly supplies another template, brand system, or visual style for that mode.
 
 ## Output Modes
@@ -48,9 +48,9 @@ For each slide, include:
 - Visual structure: comparison, flow, hierarchy, matrix, cycle, timeline, risk map, checklist, or another clear structure
 - Required short labels
 - Core takeaway or closing judgment. For Modes A and C, plan it as the old-style bottom reminder bar by default; for Mode B, place it inside the page structure unless the user explicitly requests a special footer
-- For Mode D, add a short deck-level style brief: selected style family, selection reason, palette direction, typography direction, motion level, and image policy. If the user did not specify a style, infer one style family from the whole deck's content and keep it consistent.
+- For Mode D, add a short deck-level style brief: selected style family, selection reason, palette direction, typography direction, motion level, and image policy. If the user did not specify a style, offer 2-4 concise choices from `references/html-style-selection.md`, put the content-based recommendation first, and include the approved default Structured Teaching option. State that no preference means the approved default.
 
-End Phase 1 by asking the user to confirm, revise, reorder, add, or remove slides, and to choose output mode A, B, C, or D if needed.
+End Phase 1 by asking the user to confirm, revise, reorder, add, or remove slides, and to choose output mode A, B, C, or D if needed. For Mode D, include the style choice in this same confirmation request rather than creating an unnecessary extra round. Do not ask again when the user already supplied an explicit visual direction.
 
 ## Phase 2A: Image-First PPTX
 
@@ -179,8 +179,8 @@ Before building, read both:
 - `references/html-slide-deck.md` for the file contract, template workflow, interaction rules, and QA requirements
 - `references/html-style-selection.md` for content-driven style selection when the user does not provide a visual direction
 
-1. Preserve the confirmed SOIL page order, exact titles, teaching tasks, page roles, information relationships, and required labels.
-2. Follow an explicit user style first. Otherwise choose one deck-level style family from `references/html-style-selection.md`, record the reason in the style brief, and keep that family consistent across the deck. Do not average multiple competing styles.
+1. Resolve the deck-level visual style before building. Follow an explicit user style first. Otherwise present 2-4 recommended choices as part of the Phase 1 confirmation. If the user says they have no preference, asks the agent to decide, or confirms the plan without addressing style, use the approved default Structured Teaching style. Record the decision in the style brief and do not mix competing families.
+2. Preserve the confirmed SOIL page order, exact titles, teaching tasks, page roles, information relationships, and required labels.
 3. Copy `assets/html-deck-template/` into a new project output folder. Replace the sample slides, theme tokens, and document title with the approved content; do not edit the installed template in place.
 4. Build slides as semantic HTML with editable text. Use CSS Grid/Flexbox and inline SVG for comparison, process, hierarchy, cause/effect, timelines, checklists, and simple diagrams. Use raster images only when they materially improve understanding or the user asks for them.
 5. Keep the default deck offline and build-free: local `index.html`, `styles.css`, `slides.js`, and optional `assets/`. Do not add a CDN, remote font, analytics, web request, package manager, bundler, React, or a slide framework unless the user explicitly requests it.
