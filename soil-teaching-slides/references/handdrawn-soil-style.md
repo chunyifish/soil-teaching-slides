@@ -1,6 +1,6 @@
 # Hand-Drawn SOIL Teaching Slide Style
 
-Use this compact reference for Modes A and C. Both modes share the old visual template. `soil-handdrawn-style-v2.yaml` is the canonical source of truth; this file translates it into quick operational guidance. Mode B is independent and must not inherit these rules.
+Use this compact reference for Mode A. `soil-handdrawn-style-v2.yaml` is the canonical source of truth; this file translates it into quick operational guidance. Modes B and C are independent and must not inherit these rules.
 
 This style is based on the user's confirmed `黑白手繪教學圖解風` YAML v2.1.
 

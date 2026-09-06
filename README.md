@@ -4,10 +4,9 @@
 
 - A：圖像式 PPTX
 - B：可編輯 PPTX
-- C：NotebookLM 視覺草稿
-- D：離線 HTML 簡報
+- C：離線 HTML 簡報
 
-Mode D 支援高資訊量表格的投影字級、內容精簡與依序揭示。所有模式都會先產生文字版逐頁企劃，經使用者確認後才建立最終簡報。
+Mode C 支援高資訊量表格的投影字級、內容精簡與依序揭示。所有模式都會先產生文字版逐頁企劃，經使用者確認後才建立最終簡報。
 
 ## 安裝
 
@@ -48,7 +47,7 @@ $soil-teaching-slides 請做成離線 HTML 簡報。表格資訊量大，請優�
 
 1. Codex 先提供文字版逐頁教學企劃。
 2. 確認頁數、順序、標題、學習者任務與輸出模式。
-3. 回覆「確認」後，Codex 才建立 PPTX、NotebookLM 草稿或 HTML 成品。
+3. 回覆「確認」後，Codex 才建立 PPTX 或 HTML 成品。
 4. Codex 依輸出模式執行版面、溢位、互動或列印驗證。
 
 ## 授權
@@ -83,7 +82,7 @@ $soil-teaching-slides 請做成離線 HTML 簡報。表格資訊量大，請優�
 ## 建議引用
 
 ```text
-李俊儀（2026）。SOIL Teaching Slides Skill（v1.0.1）。
+李俊儀（2026）。SOIL Teaching Slides Skill（三模式版，main）。
 https://github.com/chunyifish/soil-teaching-slides
 ```
 

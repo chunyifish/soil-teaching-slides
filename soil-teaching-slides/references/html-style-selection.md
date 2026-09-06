@@ -1,4 +1,4 @@
-# Mode D Content-Driven Style Selection
+# Mode C Content-Driven Style Selection
 
 Use an explicit user style as the source of truth. When no style is specified, recommend a small set of relevant choices and ask the user to select one during the Phase 1 confirmation. Do not mix or average families.
 
@@ -92,8 +92,8 @@ Choose when the user asks for a hand-drawn SOIL look or the content strongly ben
 
 - White background, black line language, gray texture, sparse accent color
 - Editable HTML labels around local illustrations or inline SVG
-- Use the A/C YAML only when the user explicitly asks D to match that old visual family
-- Do not automatically inherit A/C page furniture or fixed takeaway bar
+- Use the Mode A YAML only when the user explicitly asks Mode C to match that old visual family
+- Do not automatically inherit Mode A page furniture or fixed takeaway bar
 
 ## Tie-Breaking
 

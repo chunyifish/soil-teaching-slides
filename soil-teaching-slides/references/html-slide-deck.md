@@ -1,4 +1,4 @@
-# Mode D Offline HTML Slide Deck
+# Mode C Offline HTML Slide Deck
 
 ## Contents
 

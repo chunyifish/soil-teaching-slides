@@ -1,6 +1,6 @@
 ---
 name: soil-teaching-slides
-description: Turn teaching materials into SOIL-style instructional slide plans, PPTX decks, NotebookLM drafts, or offline HTML presentations. Use when the user asks for teaching slides, instructional decks, SOIL slide planning, editable PPTX, ChatGPT Image 2/image-first PPTX, NotebookLM slide drafts, browser-based or HTML slides, page-by-page slide plans, YAML-driven slide style, hand-drawn teaching diagrams, or converting lesson materials into slides. Always produce a text-only page-by-page plan for confirmation before generating final slide assets.
+description: Turn teaching materials into SOIL-style instructional slide plans, PPTX decks, or offline HTML presentations. Use when the user asks for teaching slides, instructional decks, SOIL slide planning, editable PPTX, ChatGPT Image 2/image-first PPTX, browser-based or HTML slides, page-by-page slide plans, YAML-driven slide style, hand-drawn teaching diagrams, or converting lesson materials into slides. Always produce a text-only page-by-page plan for confirmation before generating final slide assets.
 ---
 # SOIL Teaching Slides
 
@@ -16,9 +16,9 @@ If the user provides a YAML/style definition, treat it as the visual source of t
 
 Default visual architecture:
 
-- Modes A and C share the user's old `黑白手繪教學圖解風` v2.1 template and YAML. Read `references/soil-handdrawn-style-v2.yaml` as the canonical style source and `references/handdrawn-soil-style.md` as its compact operational guide.
-- Mode B is an independent editable large-text system. Never import Mode B typography, page chrome, title treatment, or no-footer rule into Modes A or C.
-- Mode D is an independent offline HTML system. Reuse the approved SOIL teaching structure, but do not inherit the fixed visual system of A, B, or C unless the user explicitly requests it. Before building, ask the user to choose a visual style unless they already supplied one. If they have no preference or do not answer the style part of the confirmation, use the approved default Structured Teaching style defined in `references/html-style-selection.md`.
+- Mode A uses the user's old `黑白手繪教學圖解風` v2.1 template and YAML. Read `references/soil-handdrawn-style-v2.yaml` as the canonical style source and `references/handdrawn-soil-style.md` as its compact operational guide.
+- Mode B is an independent editable large-text system. Never import Mode B typography, page chrome, title treatment, or no-footer rule into Mode A.
+- Mode C is an independent offline HTML system. Reuse the approved SOIL teaching structure, but do not inherit the fixed visual system of A or B unless the user explicitly requests it. Before building, ask the user to choose a visual style unless they already supplied one. If they have no preference or do not answer the style part of the confirmation, use the approved default Structured Teaching style defined in `references/html-style-selection.md`.
 - Override a mode's default only when the user explicitly supplies another template, brand system, or visual style for that mode.
 
 ## Output Modes
@@ -27,11 +27,10 @@ Offer these modes after the user confirms the plan, unless the user already chos
 
 - A. Image-first PPTX: generate one full-slide 16:9 image per page, then package the images into a PPTX. Slide text is not expected to be editable.
 - B. Editable PPTX: default to the approved v8 pure-text style and build the deck with editable native text boxes, shapes, lines, tables, and diagrams. Do not add images unless the user explicitly requests them.
-- C. NotebookLM draft: use NotebookLM Studio to create a fast visual slide-deck draft, then download the PPTX or PDF.
-- D. Offline HTML presentation: create a browser-playable 16:9 slide deck with editable HTML text and structure. Default to local HTML, CSS, JavaScript, and assets with no build step, CDN, or network dependency. Add images only when pedagogically necessary or explicitly requested.
+- C. Offline HTML presentation: create a browser-playable 16:9 slide deck with editable HTML text and structure. Default to local HTML, CSS, JavaScript, and assets with no build step, CDN, or network dependency. Add images only when pedagogically necessary or explicitly requested.
 
 Default to mode B when the user emphasizes classroom reuse, future editing, or teacher customization. Default to mode A when the user asks for highly visual SOIL-style slides, ChatGPT Image 2, image2, image-first, direct image-generated slide text, or the default black-and-white hand-drawn teaching diagram style.
-Default to mode D when the user asks for HTML slides, browser slides, a web presentation, offline web slides, or an editable presentation that runs without PowerPoint.
+Default to mode C when the user asks for HTML slides, browser slides, a web presentation, offline web slides, or an editable presentation that runs without PowerPoint.
 
 ## Phase 1: Slide Plan
 
@@ -40,17 +39,17 @@ Prepare a reviewable slide plan, usually 8-14 slides unless the material clearly
 For each slide, include:
 
 - Page number and total pages
-- Course or section label. For Modes A and C, approve exactly one short header label per slide; keep it separate from the slide's required short labels
+- Course or section label. For Mode A, approve exactly one short header label per slide; keep it separate from the slide's required short labels
 - Exact slide title
 - One teaching point
 - Learner task: what the learner should notice, compare, sequence, decide, or practice
 - Page role: question opener, misconception clarifier, comparison, process, cause/effect, category, practice, summary, or another clear role
 - Visual structure: comparison, flow, hierarchy, matrix, cycle, timeline, risk map, checklist, or another clear structure
 - Required short labels
-- Core takeaway or closing judgment. For Modes A and C, plan it as the old-style bottom reminder bar by default; for Mode B, place it inside the page structure unless the user explicitly requests a special footer
-- For Mode D, add a short deck-level style brief: selected style family, selection reason, palette direction, typography direction, motion level, and image policy. If the user did not specify a style, offer 2-4 concise choices from `references/html-style-selection.md`, put the content-based recommendation first, and include the approved default Structured Teaching option. State that no preference means the approved default.
+- Core takeaway or closing judgment. For Mode A, plan it as the old-style bottom reminder bar by default; for Mode B, place it inside the page structure unless the user explicitly requests a special footer
+- For Mode C, add a short deck-level style brief: selected style family, selection reason, palette direction, typography direction, motion level, and image policy. If the user did not specify a style, offer 2-4 concise choices from `references/html-style-selection.md`, put the content-based recommendation first, and include the approved default Structured Teaching option. State that no preference means the approved default.
 
-End Phase 1 by asking the user to confirm, revise, reorder, add, or remove slides, and to choose output mode A, B, C, or D if needed. For Mode D, include the style choice in this same confirmation request rather than creating an unnecessary extra round. Do not ask again when the user already supplied an explicit visual direction.
+End Phase 1 by asking the user to confirm, revise, reorder, add, or remove slides, and to choose output mode A, B, or C if needed. For Mode C, include the style choice in this same confirmation request rather than creating an unnecessary extra round. Do not ask again when the user already supplied an explicit visual direction.
 
 ## Phase 2A: Image-First PPTX
 
@@ -148,31 +147,9 @@ Before final delivery, verify:
 
 Render every slide at full size and as a contact sheet. Run the Presentations overflow check and `scripts/validate_editable_b_pptx.py` before delivery. Add `--forbid-fixed-takeaway` unless the approved slide plan explicitly requests a special bottom takeaway page.
 
-## Phase 2C: NotebookLM Draft
+## Phase 2C: Offline HTML Presentation
 
-Use this path only after the user confirms mode C or explicitly asks for NotebookLM.
-
-Before using NotebookLM, read all three references:
-
-- `references/notebooklm-slide-deck.md` for the current MCP workflow and QA rules
-- `references/soil-handdrawn-style-v2.yaml` as the canonical A/C visual source
-- `references/handdrawn-soil-style.md` as the compact operational guide
-
-Mode C must remain in the same old visual family as Mode A: white background, black-and-white hand-drawn line art, sparse orange emphasis, fixed top-left page furniture, Microsoft-JhengHei-like Traditional Chinese typography, framed teaching structures, and the bottom takeaway bar. Use a medium-gray page-number block, one approved section label with consistent placement and styling, and a light-gray takeaway border. Do not apply Mode B's 32 pt title, one-line large-text composition, bottom-right metadata, or no-fixed-footer rule.
-
-1. Convert the confirmed slide plan into one consolidated Traditional Chinese source containing the exact page order, one approved section label per slide, slide titles, learner tasks, required labels, bottom takeaways, page roles, and visual structures. State that the section label is distinct from required labels and must not be expanded or concatenated.
-2. Append the complete canonical YAML and explicit hard constraints for Taiwan Traditional Chinese, white background, and A/C shared old page furniture to that same source. Do not rely on a visual-style name alone.
-3. Create a clean NotebookLM notebook for the deck unless the user explicitly asks to reuse one and its sources are known not to conflict.
-4. Add the consolidated source with `source_add` and wait for processing.
-5. Create a `slide_deck` Studio artifact with conservative parameters. Poll `studio_status` until completed or failed.
-6. Download the completed deck into the current workspace as PPTX and, when available, PDF. Do not stop at a NotebookLM URL.
-7. Render or extract slide media, create a contact sheet, and inspect page count, Traditional Chinese fidelity, white background, A/C visual style, title drift, and bottom takeaway presence.
-8. Use `studio_revise` for isolated slide defects. If the whole deck drifts in language or style, start a clean notebook with one corrected consolidated source instead of stacking corrective sources.
-9. Explain that Mode C is a fast visual draft: NotebookLM may paraphrase text and its output is commonly image/media-based rather than fully editable.
-
-## Phase 2D: Offline HTML Presentation
-
-Use this path only after the user confirms mode D or explicitly asks for an HTML/browser presentation.
+Use this path only after the user confirms mode C or explicitly asks for an HTML/browser presentation.
 
 Before building, read both:
 
@@ -214,14 +191,6 @@ For image-first decks:
 - Inspect direct-generated text for obvious page-breaking errors; regenerate the worst slides instead of accepting unreadable text.
 - Package into PPTX and verify slide count, media count, and no overflow.
 - If render tools fail because of Windows Chinese path or `HOME` runtime issues, copy the PPTX to an ASCII temp path and set `HOME=C:\Users\User` before rendering.
-
-For NotebookLM decks:
-
-- Confirm that the local PPTX exists, is non-empty, and has the expected slide count.
-- Download PDF too when NotebookLM provides it.
-- Inspect a contact sheet rather than trusting artifact status alone.
-- Verify Taiwan Traditional Chinese, Microsoft-JhengHei-like typography throughout, white background, sparse orange accents, medium-gray page-number blocks, one consistently styled top-left section label per slide, and a bottom takeaway bar with a light-gray border.
-- Report wording, title, slide-count, or style drift honestly; never describe Mode C as exact-fidelity output.
 
 For HTML decks:
 
