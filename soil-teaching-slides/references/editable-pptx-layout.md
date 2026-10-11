@@ -1,8 +1,8 @@
 # Mode B Approved Editable PPTX Layout
 
-Use this reference whenever `soil-teaching-slides` produces Mode B. The approved system combines one-line large-text pages with framed-text comparison, process, and hierarchy pages.
+Use this reference whenever `soil-teaching-slides` produces Mode B. The approved system combines one-line large-text pages with framed-text comparison, process, and hierarchy pages. For teaching sequence, formulas, file reliability, and regression checks, also follow [`b-mode-quality.md`](b-mode-quality.md).
 
-`../assets/mode-b-approved-reference.pptx` is the visual benchmark. Use it to judge hierarchy, spacing, alignment, framed-text density, and large-text treatment. Do not copy its teaching content, wording, or slide count.
+`../assets/mode-b-approved-reference.pptx` is the layout benchmark. Use it to judge hierarchy, spacing, alignment, framed-text density, and large-text treatment. `../assets/Fractal_Editable.pptx` is an additional quality case for learner progression and the integration of geometry, evidence, data, and formulas. Neither deck supplies fixed teaching content, wording, page order, or slide count. Do not assume the case deck's underlying formula construction is the preferred implementation.
 
 ## Editable Contract
 

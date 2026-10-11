@@ -1,0 +1,14 @@
+{
+  "description": "Mode B regression formulas: LaTeX source is never rendered as visible text.",
+  "cases": [
+    { "id": "fraction", "latex": "\\frac{a}{b}", "features": ["fraction"] },
+    { "id": "powers-indices", "latex": "A_n=A_0(\\frac{3}{4})^n", "features": ["fraction", "subscript", "superscript"] },
+    { "id": "root", "latex": "\\sqrt{x^2+1}", "features": ["root", "superscript"] },
+    { "id": "limit", "latex": "\\lim_{n\\to\\infty}(\\frac{3}{4})^n=0", "features": ["limit", "infinity", "fraction", "superscript"] },
+    { "id": "logarithm", "latex": "D=\\frac{\\log N}{\\log 2}", "features": ["fraction", "logarithm"] },
+    { "id": "aligned", "latex": "\\begin{aligned}A_n&=A_0(\\frac{3}{4})^n\\\\D&=\\frac{\\log 3}{\\log 2}\\\\\\alpha+\\beta&=\\gamma\\end{aligned}", "features": ["multiline", "fraction", "subscript", "superscript", "greek"] },
+    { "id": "greek", "latex": "\\alpha+\\beta=\\gamma", "features": ["greek"] },
+    { "id": "sum-integral", "latex": "\\sum_{i=1}^{n} i + \\int_0^1 x\\,dx", "features": ["sum", "integral", "bounds"] },
+    { "id": "chemistry", "latex": "\\mathrm{2H_2 + O_2} \\rightarrow \\mathrm{2H_2O}", "features": ["subscript", "arrow"] }
+  ]
+}

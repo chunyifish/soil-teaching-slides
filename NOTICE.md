@@ -33,8 +33,8 @@ subject to the applicable license.
 
 ## License boundaries
 
-- Software, scripts, executable HTML templates, and agent configuration: MIT.
-- SOIL instructional method descriptions, prompts, references, and the bundled
-  reference presentation: CC BY-NC-SA 4.0.
+- Software, scripts, automated tests, executable HTML templates, and agent configuration: MIT.
+- SOIL instructional method descriptions, prompts, references, release notes, and bundled
+  reference presentations: CC BY-NC-SA 4.0.
 
 See `LICENSE`, `LICENSE-CONTENT.md`, and `README.md` for details.

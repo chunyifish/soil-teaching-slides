@@ -19,8 +19,10 @@ https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 ## Covered material
 
 - `soil-teaching-slides/SKILL.md`
+- `soil-teaching-slides/CHANGELOG.md`
 - `soil-teaching-slides/references/`
 - `soil-teaching-slides/assets/mode-b-approved-reference.pptx`
+- `soil-teaching-slides/assets/Fractal_Editable.pptx`
 - Original explanatory prose in the root `README.md` and `NOTICE.md`
 
 ## Required attribution
