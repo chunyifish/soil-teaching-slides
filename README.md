@@ -6,7 +6,7 @@
 - B：可編輯 PPTX
 - C：離線 HTML 簡報
 
-Mode C 支援高資訊量表格的投影字級、內容精簡與依序揭示。所有模式都會先產生文字版逐頁企劃，經使用者確認後才建立最終簡報。
+Mode C 支援高資訊量表格的投影字級、內容精簡與依序揭示。所有模式都會先產生文字版逐頁企劃，經使用者確認後才建立最終簡報。 Mode B 另有專屬品質規範，涵蓋教學脈絡、可編輯公式、PPTX 封裝與渲染檢查，詳見 [B 模式品質規範](soil-teaching-slides/references/b-mode-quality.md)。
 
 ## 安裝
 
@@ -59,6 +59,7 @@ $soil-teaching-slides 請做成離線 HTML 簡報。表格資訊量大，請優�
 下列內容採 [MIT License](LICENSE)：
 
 - `soil-teaching-slides/scripts/`
+- `soil-teaching-slides/tests/`
 - `soil-teaching-slides/assets/html-deck-template/`
 - `soil-teaching-slides/agents/openai.yaml`
 
@@ -69,8 +70,10 @@ $soil-teaching-slides 請做成離線 HTML 簡報。表格資訊量大，請優�
 下列內容採 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](LICENSE-CONTENT.md)：
 
 - `soil-teaching-slides/SKILL.md`
+- `soil-teaching-slides/CHANGELOG.md`
 - `soil-teaching-slides/references/`
 - `soil-teaching-slides/assets/mode-b-approved-reference.pptx`
+- `soil-teaching-slides/assets/Fractal_Editable.pptx`
 - 本 README 中的原創說明文字
 
 這些內容可在非商業情境分享與改作，但必須標示作者、註明修改，並以相同授權分享改作版本。商業使用請先取得著作權人另外授權。
@@ -97,11 +100,13 @@ soil-teaching-slides/
 ├── NOTICE.md
 ├── README.md
 └── soil-teaching-slides/
+    ├── CHANGELOG.md
     ├── SKILL.md
     ├── agents/
     ├── assets/
     ├── references/
-    └── scripts/
+    ├── scripts/
+    └── tests/
 ```
 
 ## 免責聲明

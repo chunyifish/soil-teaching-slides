@@ -101,6 +101,8 @@ Read `references/editable-pptx-layout.md` before building. Treat `assets/mode-b-
 
 Use the Presentations skill and `@oai/artifact-tool` to create PowerPoint-native objects. Import `scripts/editable_b_style_helpers.mjs` when practical so color, typography, page chrome, footer, and center-line calculations remain consistent.
 
+Also read `references/b-mode-quality.md` and use `scripts/editable_b_formula_helpers.mjs` for mathematical and scientific expressions. Apply its learner-sequence, formula, filename, package-validation, and rendering checks only to Mode B; preserve Modes A and C.
+
 Mode B defaults to a pure-text deck:
 
 - White 1280 × 720 canvas and Microsoft JhengHei typography
@@ -146,6 +148,10 @@ Before final delivery, verify:
 - Empty transparent objects, white cover masks, and negative `cx`/`cy` are zero
 
 Render every slide at full size and as a contact sheet. Run the Presentations overflow check and `scripts/validate_editable_b_pptx.py` before delivery. Add `--forbid-fixed-takeaway` unless the approved slide plan explicitly requests a special bottom takeaway page.
+
+For Mode B, also run `scripts/test_editable_b_quality.py` when changing the skill or formula/rendering code. On a deck, use the validator's package, editable-object, and formula checks, then render every slide through PowerPoint when available or LibreOffice otherwise. Record which application opened and rendered the file; structure validation or LibreOffice success alone does not establish Microsoft PowerPoint compatibility.
+
+On Windows with Microsoft PowerPoint installed, use `tests/powerpoint_smoke_test.ps1` to open the final deck read-only and export each slide. Use `-TestEditability` for a temporary-copy text edit check; never save test edits to the delivered deck.
 
 ## Phase 2C: Offline HTML Presentation
 
